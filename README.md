@@ -5,6 +5,8 @@ before the glyph. Italic masters also move the hook 72 units to the right
 at the maximum italic axis value, keeping it aligned with the slanted stem.
 The family is named **Jost Compact J** for installation alongside upstream Jost.
 
+![Jost Compact J specimen showing GHIJKLM, sample words, bold, and italic](documentation/compact-j-specimen.png)
+
 ## Building this fork
 
 Run these commands from the repository root with Python 3.10 or newer.
