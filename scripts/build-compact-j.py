@@ -11,6 +11,19 @@ from fontTools.ttLib import TTFont
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def rename_variable_family(path):
+    """Keep the variable family and its named instances distinct from static fonts."""
+    font = TTFont(path)
+    for record in font['name'].names:
+        value = record.toUnicode()
+        renamed = value.replace('Jost Compact J', 'Jost Compact J Variable')
+        renamed = renamed.replace('JostCompactJ-', 'JostCompactJVariable-')
+        if renamed != value:
+            record.string = renamed.encode(record.getEncoding())
+    font['name'].setName('JostCompactJVariable', 25, 3, 1, 0x409)
+    font.save(path)
+
+
 def build():
     with tempfile.TemporaryDirectory(prefix='jost-compact-j-') as directory:
         temp = Path(directory)
@@ -24,6 +37,7 @@ def build():
             sys.executable, '-m', 'fontmake', '-m', str(designspace),
             '-o', 'variable', '--output-path', str(variable),
         ], check=True, cwd=temp)
+        rename_variable_family(variable)
         for extension in ('ttf', 'otf'):
             folder = output / extension
             subprocess.run([

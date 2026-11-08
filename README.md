@@ -4,8 +4,25 @@ This fork raises the capital J hook by 210 font units and adds 175 units
 before the glyph. Italic masters also move the hook 72 units to the right
 at the maximum italic axis value, keeping it aligned with the slanted stem.
 The family is named **Jost Compact J** for installation alongside upstream Jost.
+The variable font appears as **Jost Compact J Variable**, so it can be installed
+alongside the static family. Its named instances also have separate PostScript names.
 
 ![Jost Compact J specimen showing GHIJKLM, sample words, bold, and italic](documentation/compact-j-specimen.png)
+
+## Installing
+
+Install `fonts/JostCompactJ-VF.ttf` to use **Jost Compact J Variable**.
+For the 18 static styles, install the files from either `fonts/ttf/` or
+`fonts/otf/`. Choose one static format for installation.
+
+The variable and static families can be installed together and selected
+separately in applications. If you installed an earlier variable font that
+appeared as **Jost Compact J**, remove that variable copy before installing
+this version. Keep the static fonts installed.
+
+For websites, use the files in `fonts/woff2/`. The variable WOFF2 uses the
+family name **Jost Compact J Variable**. The static WOFF2 files use
+**Jost Compact J**. Match those names in your CSS font declarations.
 
 ## Building this fork
 
