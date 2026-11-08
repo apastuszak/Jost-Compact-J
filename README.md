@@ -1,3 +1,33 @@
+# Jost Compact J
+
+This fork raises the capital J hook by 210 font units and adds 175 units
+before the glyph. Italic masters also move the hook 72 units to the right
+at the maximum italic axis value, keeping it aligned with the slanted stem.
+The family is named **Jost Compact J** for installation alongside upstream Jost.
+
+## Building this fork
+
+Run these commands from the repository root with Python 3.10 or newer.
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r scripts/requirements-compact-j.txt
+.venv/bin/python scripts/build-compact-j.py
+```
+
+The build produces 18 static TTFs, 18 static OTFs, a variable TTF, and
+19 WOFF2 files under `fonts/`. The six edited UFO masters under `sources/UFO`
+and the designspaces are the build inputs. The older FontForge files and
+upstream shell scripts are retained as historical material. Use the command
+above to reproduce the modified family.
+
+These fonts are rebuilt from sources using the pinned tool versions. Their
+curve conversion and font tables may differ from upstream binaries and the
+earlier directly patched Compact J downloads. All other source glyphs retain
+their original outlines. Original licensing and author credits are retained.
+
+## Upstream documentation
+
 [Jost*](http://indestructible-type.github.io/Jost.html)
 ========
 ![Jost* Picture](https://indestructibletype.com/assets/Jost-h.svg)
