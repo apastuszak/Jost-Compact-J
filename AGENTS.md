@@ -20,12 +20,12 @@ The changes below are already applied to the masters. Treat them as design
 constraints and do not apply the offsets a second time.
 
 - The hook is raised 210 font units relative to upstream Jost.
-- The glyph is shifted right 175 units and its advance width is increased by
-  175 units, providing room before the raised hook while retaining spacing
+- The glyph is shifted right 155 units and its advance width is increased by
+  155 units, providing room before the raised hook while retaining spacing
   after J.
 - Italic masters at the maximum italic axis value also shift the raised hook
   72 units right to follow the stem's slant. Intermediate italics interpolate.
-- The Book J outline bounds are `(64, -10, 335, 700)` with advance width 415.
+- The Book J outline bounds are `(44, -10, 315, 700)` with advance width 395.
   Preserve optical overshoot in the other weights and glyphs.
 - Check J in the middle of text, especially `IJK` and `GHIJKLM`. Initial-only
   specimens missed an I–J collision in an earlier version.

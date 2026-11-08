@@ -1,13 +1,15 @@
 # Jost Compact J
 
-This fork raises the capital J hook by 210 font units and adds 175 units
+Current fork version: **3.8**.
+
+This fork raises the capital J hook by 210 font units and adds 155 units
 before the glyph. Italic masters also move the hook 72 units to the right
 at the maximum italic axis value, keeping it aligned with the slanted stem.
 The family is named **Jost Compact J** for installation alongside upstream Jost.
 The variable font appears as **Jost Compact J Variable**, so it can be installed
 alongside the static family. Its named instances also have separate PostScript names.
 
-![Jost Compact J specimen showing GHIJKLM, sample words, bold, and italic](documentation/compact-j-specimen.png)
+![Jost Compact J specimen showing GHIJKLM, IJK, and sample words in upright and italic weights](documentation/compact-j-specimen.png)
 
 ## Installing
 
